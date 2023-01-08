@@ -1,12 +1,12 @@
 /*global styles*/
 
 *{
-  margin:10;
-  padding: 10;
+  margin:00;
   box-sizing: border-box;
-  list-style: none;
+  /* list-style: none; */
   font-family: monospace, sans-serif;
-  /* background-color: aqua; */
+  color: black;
+  /* background-color: rgb(192, 221, 221); */
 
 /* 
 The best way to solve the problem of an inconsistent box model is to set all the margins 
@@ -16,17 +16,50 @@ https://www.thoughtco.com/css-zero-out-margins-3464247
 The box-sizing property allows us to include the padding and border in an element's total width and height.
 https://www.w3schools.com/css/css3_box-sizing.asp
 */
-
-
-}
-
-h1{
-    color: red;
 }
 
 header{
-    display: flex;                          
-    justify-content: space-between;     /*This spaces out name and nav elements. It even distributes elements, regardless of quantity of elements*/
-    align-items: center;                /*aligns/centralises 'name' with 'nav'*/
-    background-color: white;
+    display: flex;   
+    flex-direction: column;                       
+    align-items: center; 
+    padding: 30px;
+    background-color: #e5e7eb;
+    border-bottom: 1px solid black;             
+    /* position: relative; */
+    /* min-height: 100vh; */
 }
+
+header #name{
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: 800;
+
+}
+
+header nav{
+    padding: 10px;
+}
+
+header nav a{
+    text-decoration: none;
+    padding: 0px 10px; /*first value top/bottom, 2nd value left/right*/
+    background-color: white;
+    border-radius: 20px;
+    letter-spacing: 1px;
+
+}
+
+header nav a:hover{
+    background-color: #e5e7eb;
+
+}
+
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* max-width: 2000px; */
+    margin: 50px 100px;
+} 
+
