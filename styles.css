@@ -1,0 +1,32 @@
+/*global styles*/
+
+*{
+  margin:10;
+  padding: 10;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: monospace, sans-serif;
+  /* background-color: aqua; */
+
+/* 
+The best way to solve the problem of an inconsistent box model is to set all the margins 
+and padding values of HTML elements to zero. 
+https://www.thoughtco.com/css-zero-out-margins-3464247 
+
+The box-sizing property allows us to include the padding and border in an element's total width and height.
+https://www.w3schools.com/css/css3_box-sizing.asp
+*/
+
+
+}
+
+h1{
+    color: red;
+}
+
+header{
+    display: flex;                          
+    justify-content: space-between;     /*This spaces out name and nav elements. It even distributes elements, regardless of quantity of elements*/
+    align-items: center;                /*aligns/centralises 'name' with 'nav'*/
+    background-color: white;
+}
