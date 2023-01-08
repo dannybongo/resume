@@ -61,5 +61,15 @@ main{
     justify-content: space-around;
     /* max-width: 2000px; */
     margin: 50px 100px;
-} 
+}
 
+main .main-container{
+    background-color: green;
+    border-radius: 40px;
+    padding: 20px;
+
+}
+
+main img{
+border-radius: 20px;
+}
