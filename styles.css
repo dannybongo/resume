@@ -1,55 +1,65 @@
-/*global styles*/
+/*--------------------------------------------- GLOBAL STYLES --------------------------------------------- */
 
 *{
-  margin:00;
+  margin:0;
   box-sizing: border-box;
   font-family: monospace, sans-serif;
   color: black;
 
-/* 
-The best way to solve the problem of an inconsistent box model is to set all the margins 
-and padding values of HTML elements to zero. 
-https://www.thoughtco.com/css-zero-out-margins-3464247 
+  /* outline:auto;
+  outline-color: red; */
 
-The box-sizing property allows us to include the padding and border in an element's total width and height.
-https://www.w3schools.com/css/css3_box-sizing.asp
-*/
+/*--------------------------------------------- HEADER --------------------------------------------- */
+
 }
 header{                       
     padding: 30px;
-    background-color: #e5e7eb;
+    background-color: #e87461;
     border-bottom: 1px solid black;             
 }
-header #name{
+header .name{
     font-size: 40px;
     text-decoration: none;
     font-weight: 800;
     padding-bottom: 10px;
 }
-header .nav-and-contact{
+header .contact{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    position:absolute;
+    top:30px;
+    right:10px; 
 }
-header nav a{
-    text-decoration: none;
-    padding: 0px 10px;                       
-    /*first value top/bottom, 2nd value left/right*/
-    background-color: white;
-    border-radius: 20px;
-    letter-spacing: 1px;
-}
-header nav a:hover{
-    background-color: #e5e7eb;
+header .contact a{
+margin-bottom: 10px; 
 }
 header .contact a:hover{
     color: #0000FF;
 }
+header nav{
+    display: flex;
+}
+header nav a{
+    text-decoration: none;
+    padding: 0px 10px;                       
+    /* padding: 0px 10px ---> first value = top/bottom, 2nd value = left/right*/
+    background-color: white;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    margin-right: 10px;
+}
+header nav a:hover{
+    background-color: #e87461;
+}
+
+/*--------------------------------------------- MAIN CONTENT --------------------------------------------- */
+
 main .banner{
     background-image:url(images/banner.jpg);     
-    /*I had to resize the image 1200W x 700H, which is appropriate for a background image*/
+    /*I had to resize the image to 1200W x 700H, which is more appropriate for a background image*/
     background-repeat: no-repeat;
     background-size: cover;
-    /*scales the image to the banner area*/
+    /* background-size: cover ---> scales the image to the banner area*/
     padding-top: 100px;
     padding-bottom: 100px;
     border-bottom: 1px solid black; 
@@ -58,7 +68,6 @@ main .main-container{
     display: flex;
     justify-content: space-between;
     margin: 40px 100px;
-
 }
 main .main-container > *{                    
 /*  > * is just for selecting all children  */
@@ -69,10 +78,12 @@ main .main-container > *{
 }
 main .main-container img{
     width: 100%;
-    border-radius: 10px;
-    /* object-fit: cover; */
+    border-radius: 40px;
 }
-
+main .main-container :hover{
+    background-color: #e87461;
+    border-radius: 40px;
+}
 main .main-container h2{  
     text-align: center;
     padding-bottom: 5px;
@@ -87,30 +98,51 @@ font-weight: 300;
 line-height: 30px;
 font-size: 20px;
 }
-
-
-    footer{
-         border-top: 1px solid black;
-         background-color: #e5e7eb;
-    }
-
-@media (max-width:1000px){                  
-    header .nav-and-contact{
-        flex-direction: column;
-
-    }
+main .note{
+    color: red;
 }
-@media (max-width: 900px){                 
+
+/*--------------------------------------------- FOOTER --------------------------------------------- */
+
+footer{
+    border-top: 1px solid black;
+    background-color: #e87461;
+    position: relative;
+    height: 100px;
+}
+
+/*--------------------------------------------- MEDIA QUERIES --------------------------------------------- */
+
+@media (max-width: 1200px){                  
     header .contact{
-        margin-top: 10px;
-        
+        position: static;
     }
 }
 
-@media (max-width: 800px){                  
-/*When the website width is less than 800px, the flex rows convert to a columns*/
+@media (max-width: 1200px){                  
     main .main-container{
         flex-direction: column;
-        margin: 20px 20px;
+        margin:50px;
     }
 }
+
+/*--------------------------------------------- COMMENTS --------------------------------------------- */
+
+/* 
+Below are comments/useful links to features used in the above CSS code.
+
+Outline can be useful for identifying sections of the site & their containers. Comment out when not in use.
+
+The best way to solve the problem of an inconsistent box model is to set all the margins 
+and padding values of HTML elements to zero. 
+https://www.thoughtco.com/css-zero-out-margins-3464247 
+
+The box-sizing property allows us to include the padding and border in an element's total width and height.
+https://www.w3schools.com/css/css3_box-sizing.asp
+
+An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+https://www.w3schools.com/css/css_positioning.asp
+
+media queries are basically conditional statements.
+*/
