@@ -52,7 +52,7 @@ header nav a:hover{
     background-color: #e87461;
 }
 
-/*--------------------------------------------- MAIN CONTENT --------------------------------------------- */
+/*--------------------------------------------- MAIN CONTENT INDEX --------------------------------------------- */
 
 main .banner{
     background-image:url(images/banner.jpg);     
@@ -102,14 +102,69 @@ main .note{
     color: red;
 }
 
-/*--------------------------------------------- FOOTER --------------------------------------------- */
+/*--------------------------------------------- MAIN CONTENT ABOUT BANNER --------------------------------------------- */
 
-footer{
-    border-top: 1px solid black;
-    background-color: #e87461;
-    position: relative;
-    height: 100px;
+main .banner{
+    margin-bottom: 30px;
 }
+
+main .banner h1{
+    text-align: center;
+}
+
+main .banner p{
+    text-align: center;   
+}
+
+/*--------------------------------------------- MAIN CONTENT ABOUT TIMELINE --------------------------------------------- */
+
+.timeline-title { text-align: center 
+}
+.timeline{
+  position: relative;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+.timeline-container{
+  margin: 10px;
+  position: relative;
+  width: 50%;  /*sets this container to be x% of .timeline div*/
+  background-color: #e87461;
+  /* border-radius: 10px; */
+}
+.timeline-content{
+  padding: 20px;
+  position: relative;
+}
+.left{
+  left: 0;
+}
+.right{
+  left: 50%;
+}
+.timeline::after{
+  content: '';
+  position: absolute;
+  width:6px;
+  height: 100%;
+  background: black;
+  top: 0;
+  left: 50%;
+  margin-left: 5px;
+  /* z-index: -1; */
+}
+
+.timeline-content h2{
+  font-weight: 600;
+}
+.timeline-content small{
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.timeline-content li{
+  margin: 15px;
+}
+
 
 /*--------------------------------------------- MEDIA QUERIES --------------------------------------------- */
 
