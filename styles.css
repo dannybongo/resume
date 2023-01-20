@@ -1,151 +1,221 @@
 /*--------------------------------------------- GLOBAL STYLES --------------------------------------------- */
 
-*{
-  margin:0;
+* {
+  margin: 0;
   box-sizing: border-box;
   font-family: monospace, sans-serif;
   color: black;
 
-  /* outline:auto;
-  outline-color: red; */
+  outline: auto;
+  outline-color: red;
 
-/*--------------------------------------------- HEADER --------------------------------------------- */
-
+  /*--------------------------------------------- HEADER --------------------------------------------- */
 }
-header{                       
-    padding: 30px;
-    background-color: #e87461;
-    border-bottom: 1px solid black;             
+header {
+  padding: 30px;
+  background-color: #e87461;
+  border-bottom: 1px solid black;
 }
-header .name{
-    font-size: 40px;
-    text-decoration: none;
-    font-weight: 800;
-    padding-bottom: 10px;
+header .name {
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: 800;
+  padding-bottom: 10px;
 }
-header .contact{
-    display: flex;
-    flex-direction: column;
-    position:absolute;
-    top:30px;
-    right:10px; 
+header .contact {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 30px;
+  right: 10px;
 }
-header .contact a{
-margin-bottom: 10px; 
+header .contact a {
+  margin-bottom: 10px;
 }
-header .contact a:hover{
-    color: #0000FF;
+header .contact a:hover {
+  color: #0000ff;
 }
-header nav{
-    display: flex;
+header nav {
+  display: flex;
 }
-header nav a{
-    text-decoration: none;
-    padding: 0px 10px;                       
-    /* padding: 0px 10px ---> first value = top/bottom, 2nd value = left/right*/
-    background-color: white;
-    border-radius: 20px;
-    letter-spacing: 1px;
-    margin-right: 10px;
+header nav a {
+  text-decoration: none;
+  padding: 0px 10px;
+  /* padding: 0px 10px ---> first value = top/bottom, 2nd value = left/right*/
+  background-color: white;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  margin-right: 10px;
 }
-header nav a:hover{
-    background-color: #e87461;
+header nav a:hover {
+  background-color: #e87461;
 }
 
 /*--------------------------------------------- MAIN CONTENT INDEX --------------------------------------------- */
 
-main .banner{
-    background-image:url(images/banner.jpg);     
-    /*I had to resize the image to 1200W x 700H, which is more appropriate for a background image*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-size: cover ---> scales the image to the banner area*/
-    padding-top: 100px;
-    padding-bottom: 100px;
-    border-bottom: 1px solid black; 
+main .banner {
+  background-image: url(images/banner.jpg);
+  /*I had to resize the image to 1200W x 700H, which is more appropriate for a background image*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-size: cover ---> scales the image to the banner area*/
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid black;
 }
-main .main-container{
-    display: flex;
-    justify-content: space-between;
-    margin: 40px 100px;
+main .main-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 100px;
 }
-main .main-container > *{                    
-/*  > * is just for selecting all children  */
-    padding: 10px;
-    margin-bottom: 5%;
-    min-width: 0; 
-    flex-basis: 31%; 
+main .main-container > * {
+  /*  > * is just for selecting all children  */
+  padding: 10px;
+  margin-bottom: 5%;
+  min-width: 0;
+  flex-basis: 31%;
 }
-main .main-container img{
-    width: 100%;
-    border-radius: 40px;
+main .main-container img {
+  width: 100%;
+  border-radius: 40px;
 }
-main .main-container :hover{
-    background-color: #e87461;
-    border-radius: 40px;
+main .main-container :hover {
+  background-color: #e87461;
+  border-radius: 40px;
 }
-main .main-container h2{  
-    text-align: center;
-    padding-bottom: 5px;
-    font-weight: 600;
-    margin: 10px, 0px;
-    font-size: 30px;
+main .main-container h2 {
+  text-align: center;
+  padding-bottom: 5px;
+  font-weight: 600;
+  margin: 10px, 0px;
+  font-size: 30px;
 }
-main .main-container p{  
-text-align: center;
-padding-bottom: 5px;
-font-weight: 300;
-line-height: 30px;
-font-size: 20px;
+main .main-container p {
+  text-align: center;
+  padding-bottom: 5px;
+  font-weight: 300;
+  line-height: 30px;
+  font-size: 20px;
 }
-main .note{
-    color: red;
+main .note {
+  color: red;
 }
 
 /*--------------------------------------------- MAIN CONTENT ABOUT BANNER --------------------------------------------- */
 
-main .banner{
-    margin-bottom: 30px;
+main .banner {
+  margin-bottom: 30px;
 }
 
-main .banner h1{
-    text-align: center;
+main .banner h1 {
+  text-align: center;
 }
 
-main .banner p{
-    text-align: center;   
+main .banner p {
+  text-align: center;
 }
 
-/*--------------------------------------------- MAIN CONTENT ABOUT TIMELINE --------------------------------------------- */
+/*--------------------------------------------- MAIN CONTENT ABOUT  --------------------------------------------- */
+/*used this website to help work out below code https://cssgrid-generator.netlify.app */
 
-.timeline-title { text-align: center 
+.about-container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
-.timeline{
+
+.about-box {
+  background-color: #e87461;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about-box h2 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.about-box ul {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.about-box p {
+  padding-bottom: 0px;
+  padding-top: 20px;
+  /* text-align: center; */
+}
+
+.item-A {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.item-B {
+  grid-area: 2 / 2 / 4 / 3;
+}
+.item-C {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.item-D {
+  grid-area: 3 / 1 / 4 / 2;
+}
+/*--------------------------------------------- ABOUT-IMAGES --------------------------------------------- */
+
+.image-container {
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* 
+.image-subcontainer {
+  flex-grow: 1;
+  padding: 5px;
+} */
+
+.image-subcontainer img {
+  max-width: 400px !important;
+  height: 400px !important;
+  object-fit: cover;
+}
+
+/*--------------------------------------------- MAIN CONTENT TIMELINE --------------------------------------------- */
+
+.timeline-title {
+  text-align: center;
+  margin-top: 30px;
+  border-top: solid 1px black;
+  padding-top: 30px;
+}
+.timeline {
   position: relative;
   max-width: 1200px;
   margin: 50px auto;
 }
-.timeline-container{
+.timeline-container {
   margin: 10px;
   position: relative;
-  width: 50%;  /*sets this container to be x% of .timeline div*/
+  width: 50%; /*sets this container to be x% of .timeline div*/
   background-color: #e87461;
   /* border-radius: 10px; */
 }
-.timeline-content{
+.timeline-content {
   padding: 20px;
   position: relative;
 }
-.left{
+.left {
   left: 0;
 }
-.right{
+.right {
   left: 50%;
 }
-.timeline::after{
-  content: '';
+.timeline::after {
+  content: "";
   position: absolute;
-  width:6px;
+  width: 6px;
   height: 100%;
   background: black;
   top: 0;
@@ -154,31 +224,36 @@ main .banner p{
   /* z-index: -1; */
 }
 
-.timeline-content h2{
+.timeline-content h2 {
   font-weight: 600;
 }
-.timeline-content small{
+.timeline-content small {
   display: inline-block;
   margin-bottom: 15px;
 }
-.timeline-content li{
+.timeline-content li {
   margin: 15px;
 }
 
-
 /*--------------------------------------------- MEDIA QUERIES --------------------------------------------- */
 
-@media (max-width: 1200px){                  
-    header .contact{
-        position: static;
-    }
+@media (max-width: 1200px) {
+  header .contact {
+    position: static;
+  }
 }
 
-@media (max-width: 1200px){                  
-    main .main-container{
-        flex-direction: column;
-        margin:50px;
-    }
+@media (max-width: 1200px) {
+  main .main-container {
+    flex-direction: column;
+    margin: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .image-subcontainer {
+    grid-row: span 1;
+  }
 }
 
 /*--------------------------------------------- COMMENTS --------------------------------------------- */
