@@ -6,8 +6,8 @@
   font-family: monospace, sans-serif;
   color: black;
 
-  outline: auto;
-  outline-color: red;
+  /* outline: auto;
+  outline-color: red; */
 
   /*--------------------------------------------- HEADER --------------------------------------------- */
 }
@@ -146,7 +146,6 @@ main .banner p {
 .about-box p {
   padding-bottom: 0px;
   padding-top: 20px;
-  /* text-align: center; */
 }
 
 .item-A {
@@ -163,23 +162,25 @@ main .banner p {
 }
 /*--------------------------------------------- ABOUT-IMAGES --------------------------------------------- */
 
-.image-container {
+.image-gallery {
+  padding-right: 40px; /*For some reason, despite justify-content center, The container wasnt aligned with the container above. This padding fixed that, although I'm not sure if this is the correct*/
   display: flex;
-  margin: 20px;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /*The flex-wrap property ensures that flex items will wrap onto another line*/
+  justify-content: center; /*The justify-content property with a value of center will center items on the main axis*/
+  gap: 20px; /*The gap property sets a gap between rows and columns (in this case, 10px)*/
 }
-/* 
-.image-subcontainer {
-  flex-grow: 1;
-  padding: 5px;
-} */
 
-.image-subcontainer img {
-  max-width: 400px !important;
-  height: 400px !important;
-  object-fit: cover;
+.image-gallery > li {
+  flex-basis: 400px; /*On the flex item, we applied a flex-basis: 350px;. Every flex item can grow or shrink from its natural size. By default, they have the following declarations: flex-grow: 0, flex-shrink: 1, and flex-basis: auto. Meaning, flex items use their natural content size if no size is defined. In our case, we defined a size of 350px. So, individual items take a width value of 350px. With the default grow and shrink value, the items can shrink from their flex-basis to fit the container but not grow from it. The second project below will discuss how to make flex items grow from their initial length.*/
+  list-style-type: none;
+}
+
+.image {
+  object-fit: cover; /*The object-fit: cover; we applied to the image keeps its aspect ratio and ensures it clips to fit.*/
+  width: 100%; /*adding max-width: 100%; and height: auto; ensures images are responsive and can scale well. We can also use width: 100%; and height: 100%; instead. In the end, the layout looks like so*/
+  height: 400px;
+  vertical-align: middle;
+  border-radius: 5px;
 }
 
 /*--------------------------------------------- MAIN CONTENT TIMELINE --------------------------------------------- */
