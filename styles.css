@@ -40,25 +40,57 @@ header nav {
 }
 header nav a {
   text-decoration: none;
-  padding: 0px 10px;
-  /* padding: 0px 10px ---> first value = top/bottom, 2nd value = left/right*/
+  padding: 0px 10px; /* padding: 0px 10px ---> first value = top/bottom, 2nd value = left/right*/
   background-color: white;
   border-radius: 20px;
   letter-spacing: 1px;
   margin-right: 10px;
+  width: 110px;
+  height: 20px;
+  text-align: center;
 }
 header nav a:hover {
   background-color: #e87461;
 }
 
-/*--------------------------------------------- MAIN CONTENT INDEX --------------------------------------------- */
+/*--------------------------------------------- FOOTER --------------------------------------------- */
+
+footer {
+  background-color: #e87461;
+  padding: 30px;
+  border-top: 1px solid black;
+}
+
+footer .cv-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  padding: 0px 10px; /* padding: 0px 10px ---> first value = top/bottom, 2nd value = left/right*/
+  background-color: white;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  width: 150px;
+  height: 20px;
+  text-align: center;
+}
+
+footer a:hover {
+  background-color: #e87461;
+  cursor: pointer;
+}
+
+/*--------------------------------------------- BANNER --------------------------------------------- */
 
 main .banner {
-  background-image: url(images/banner.jpg);
-  /*I had to resize the image to 1200W x 700H, which is more appropriate for a background image*/
+  background-image: url(images/banner.jpg); /*I had to resize the image to 1200W x 700H, which is more appropriate for a background image*/
   background-repeat: no-repeat;
-  background-size: cover;
-  /* background-size: cover ---> scales the image to the banner area*/
+  background-size: cover; /* background-size: cover ---> scales the image to the banner area*/
   padding-top: 100px;
   padding-bottom: 100px;
   border-bottom: 1px solid black;
@@ -79,10 +111,6 @@ main .main-container img {
   width: 100%;
   border-radius: 40px;
 }
-main .main-container :hover {
-  background-color: #e87461;
-  border-radius: 40px;
-}
 main .main-container h2 {
   text-align: center;
   padding-bottom: 5px;
@@ -101,7 +129,7 @@ main .note {
   color: red;
 }
 
-/*--------------------------------------------- MAIN CONTENT ABOUT BANNER --------------------------------------------- */
+/*--------------------------------------------- INDEX-MAIN CONTENT --------------------------------------------- */
 
 main .banner {
   margin-bottom: 30px;
@@ -115,7 +143,7 @@ main .banner p {
   text-align: center;
 }
 
-/*--------------------------------------------- MAIN CONTENT ABOUT  --------------------------------------------- */
+/*--------------------------------------------- ABOUT-TEXT CONTENT--------------------------------------------- */
 /*used this website to help work out below code https://cssgrid-generator.netlify.app */
 
 .about-container {
@@ -160,7 +188,7 @@ main .banner p {
 .item-D {
   grid-area: 3 / 1 / 4 / 2;
 }
-/*--------------------------------------------- ABOUT-IMAGES --------------------------------------------- */
+/*--------------------------------------------- ABOUT-IMAGE GALLARY --------------------------------------------- */
 
 .image-gallery {
   padding-right: 40px; /*For some reason, despite justify-content center, The container wasnt aligned with the container above. This padding fixed that, although I'm not sure if this is the correct*/
@@ -183,7 +211,7 @@ main .banner p {
   border-radius: 5px;
 }
 
-/*--------------------------------------------- MAIN CONTENT TIMELINE --------------------------------------------- */
+/*--------------------------------------------- ABOUT-CAREER TIMELINE --------------------------------------------- */
 
 .timeline-title {
   text-align: center;
@@ -234,6 +262,27 @@ main .banner p {
 }
 .timeline-content li {
   margin: 15px;
+}
+/*--------------------------------------------- PORTFOLIO MAIN-CONTENT--------------------------------------------- */
+
+.port-container {
+  outline-width: 1px;
+  outline-color: black;
+}
+
+.port-container h1 {
+  text-align: center;
+}
+
+.port-subcontainer {
+  background-color: #e87461;
+  margin: 20px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.port-subcontainer > * {
+  margin-bottom: 10px;
 }
 
 /*--------------------------------------------- MEDIA QUERIES --------------------------------------------- */
