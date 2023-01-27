@@ -267,22 +267,53 @@ main .banner p {
 
 .port-container {
   outline-width: 1px;
-  outline-color: black;
-}
-
-.port-container h1 {
-  text-align: center;
-}
-
-.port-subcontainer {
-  background-color: #e87461;
+  margin-top: 20px;
   margin: 20px;
-  padding: 40px;
-  border-radius: 10px;
+  outline-color: black;
+  display: flex;
+  align-content: stretch;
+  gap: 20px;
 }
 
-.port-subcontainer > * {
-  margin-bottom: 10px;
+.port-subcontainer-text {
+  background-color: #e87461;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.port-subcontainer-text > * {
+  margin: 10px;
+}
+
+.port-subcontainer-git {
+  background-color: #e87461;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.port-subcontainer-git img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin: 20px;
+}
+
+.port-subcontainer-git h3 {
+  text-align: center;
+  margin: 20px;
+}
+
+.port-subcontainer-git img:hover {
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.coming-soon {
+  text-align: center;
+  color: red;
+  margin-bottom: 20px;
 }
 
 /*--------------------------------------------- MEDIA QUERIES --------------------------------------------- */
@@ -301,11 +332,44 @@ main .banner p {
 }
 
 @media (max-width: 1200px) {
-  .image-subcontainer {
-    grid-row: span 1;
+  .about-container {
+    display: flex;
+    flex-direction: column;
   }
 }
 
+@media (max-width: 1200px) {
+  .port-container {
+    flex-direction: column;
+    margin: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .port-subcontainer-git {
+    flex-direction: column;
+  }
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 650px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 2px;
+  }
+
+  /* Full-width containers */
+  .timeline-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
 /*--------------------------------------------- COMMENTS --------------------------------------------- */
 
 /* 
